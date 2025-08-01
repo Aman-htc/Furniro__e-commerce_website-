@@ -149,6 +149,21 @@ body{
     display: none;
     
 }
+
+
+.side-bar{
+    width: 200px;
+    background-color: var(--accent-color-light);
+
+    text-align: center;
+    box-shadow: 0px 2px 6px rosybrown;
+    border-radius: 1rem;
+    z-index: 1;
+    top: 5rem;
+    display: none;
+
+    
+}
 @media (max-width:991.99px) {
     .page-link {
         width: 300px;
@@ -181,7 +196,16 @@ body{
     .nav-link{
         padding-inline: 3rem;
     }
+    .side-bar{
+    
+      display: flex;
+      text-align: center;
+    
+    }
+    
+
 }
+
 
 
 
@@ -192,7 +216,7 @@ body{
     padding: 0; 
     margin: 0; 
     margin-inline: auto; 
-    /* position: relative */
+    position:relative ; 
 
 }
 
@@ -201,34 +225,42 @@ body{
     height: auto;
     display: block;
     margin-inline: auto;
+    
 }
-/* .image-text{
+.image-text{
+    padding-top: 2rem;
     right: 4rem;
     top:9.50rem;
-    max-width: 643px;
-    width: 100%;
-
-    height: 443px;
-    background-color: var(--accent-color);
-    border-radius: .78rem;
-    padding-bottom: 4rem; */
-    /* position: sticky; */
-    /* z-index: -1; */
+    width: 643px;
+    /* width: 100%; */
+     position: absolute;
+    /* display: grid; */
+    /* grid-area: 1/1;  */
     
 
+    min-height: 443px;
+    background-color: var(--accent-color);
+    border-radius: .78rem; 
+    padding-bottom: 4rem; 
+    padding-left: 3rem;
+    
+    
+    
+}
 
-
-/* } */
 /* .box3{
     max-width: 546px;
     width: 100%;
-    height: 344px;
+    min-height: 344px;
     padding-right: 4rem;
+    padding-left: 2rem;
 } */
-/* .box3 p{
+.box3 p{
     color: var(--primary-color);
-    font-size: 1.12rem; */
-/* } */
+    font-size: 1.12rem; 
+    padding-bottom: 2rem; 
+    font-weight: bold;
+ }
 .top-image h1{
     color: var(--primary-y);
 }
@@ -264,10 +296,76 @@ button{
         font-size: .90rem;
     } 
     
-    
+    .box3 p{
+        font-size: .50rem;
+        
+    }
+    .dicover{
+        font-size: 1.50rem;
+        line-height: 1.40rem;
+
+    }
+    .image-text{
+        width: 280px;
+        min-height: 100px;
+        margin-right: 1rem;
+        padding-right: 1rem;
+    }
+    button{
+        width: 100px;
+        height: 40px;
+    }
+    .box3 p{
+        padding-bottom: 1rem;
+    }
+}
+
+@media (max-width:720px) {
+    .image-text{
+        width: 200px;
+        min-height: 100px;
+        padding-bottom: 1rem;
+        top: 4rem;
+    }
+    button{
+        width: 100px;
+        height: 30px;
+        /* font-size:1rem ; */
+
+
+    }
+    .box p{
+        padding-bottom: .50rem;
+    }
+
     
     
 }
+@media (max-width:540px) {
+     .dicover{
+        font-size: 1rem;
+
+     }
+     .image-text{
+        top: 2rem;
+        padding-top: 1rem;
+     }
+     .bed-details h2{
+        font-size:1.48rem ;
+        line-height: 2rem;
+     }
+     .image-1 img{
+        width: 200px;
+     }
+    
+}
+
+    
+    
+    
+    
+
+
 
 .browse-container{
     width: 100%;
@@ -416,13 +514,8 @@ button{
 
     
 }
- .pop ul li {
-    width: 13px ;
-    height: 14px;
-    text-align: center;
-    color: var(--accent-color);
-}
- .product-image.pop:hover p {
+ 
+.pop p {
     padding-block: 1rem;
     padding-inline: 3.48rem;
     background-color: white;
@@ -432,7 +525,12 @@ button{
     color: var(--primary-y);
     font-size: 1rem;
     font-weight: bold;
+    display: none;
+    position: absolute;
 
+}
+.product-image:hover .pop p{
+    display: flex;
 }
 .pop p a{
     text-decoration: none;
@@ -442,25 +540,167 @@ button{
 
 }
 
-.pop ul{
-    width: 252px;
-    height: 24px;
-    border: 1px solid red;
+
+
+.pop ul {
+    width: 250px;
     top: 14rem;
-    /* left: 4rem; */
+    left: 2rem;
+    
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 0;
+    margin: 0;
     position: absolute;
-     display: flex;
-    justify-content: space-between; 
-    column-gap: 1rem;
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* display: grid; */
-    /* place-items: center; */
+    display: none;
 }
-.pop ul li a{
-    color: var(--accent-color);
+
+.pop ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    list-style: none;
+}
+
+.pop ul li a {
     text-decoration: none;
+    font-size: var(--font-16);
+    font-weight: bold;
+    color:white;
 }
+
+.pop ul li img {
+    width: 16px;
+    height: 16px;
+}
+.product-image:hover .pop ul{
+    display: flex;
+}
+
+
+
+/*checked bed-room details */
+.bed-room{
+    padding-block: 4rem;
+}
+
+.bed-container{
+    width: 100%;
+    max-width: 1440px;
+    margin-inline: auto;
+    background-color: #FCF8F3;
+    min-height: 640px;
+    overflow: hidden;
+    position: relative;
+
+
+
+}
+.bed-details h2{
+    font-size: 2.48rem;
+    font-weight: 700;
+    color: var(--primary-color-light);
+
+}
+.bed-details{
+    padding-left: 2rem;
+}
+.bed-details p{
+    font-size: var(--font-16);
+    font-weight: 500;
+    padding-bottom: 4rem;
+    color:#616161 ;
+
+
+}
+.bed-details a{
+   padding-inline:3rem;
+   padding-block: 1.40rem;
+    background-color: var(--primary-y);
+    text-decoration: none;
+    color: var(--accent-color-light);
+    font-size: var(--font-16);
+    font-weight: 600;
+}
+
+.swiper{
+    width: 100%;
+    width: 1140px;
+    min-height: 582px;
+    
+    overflow: hidden;
+}
+.swiper-slide{
+    display: flex;
+    gap: 3rem;
+}
+.navigation{
+    top: 12rem;
+    right: 4rem;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--accent-color-light);
+    padding: 2rem;
+    z-index: 1;
+    
+    
+}
+.swiper-pagination{
+   margin-left: 18rem;
+   margin-bottom: 5rem;
+}
+.image{
+    margin-left: 1rem;
+    
+}
+.image-1 p{
+    top: 0;
+    z-index: 1;
+}
+.inner {
+    width: 200px;
+    height: 100px;
+    background-color: white;
+    text-align: center;
+    bottom: 4rem;
+    line-height: 3rem;
+    left: 4rem;
+    opacity: .8;
+   
+
+    
+}
+.inner h4{
+    font-size: 1.50rem;
+    color: var(--primary-color-light);
+
+}
+.inner p{
+    font-size: var(--font-16);
+    color: #616161;
+}
+.right{
+    bottom: 4rem;
+    z-index: 1;
+    left: 16.50rem;
+    background-color: var(--primary-y);
+
+
+} 
+
+
+
+
+
+/* FuniroFurniture section */
+
+
 
 
 
