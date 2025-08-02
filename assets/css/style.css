@@ -198,7 +198,7 @@ body{
     }
     .side-bar{
     
-      display: flex;
+      display: none;
       text-align: center;
     
     }
@@ -232,11 +232,9 @@ body{
     right: 4rem;
     top:9.50rem;
     width: 643px;
-    /* width: 100%; */
-     position: absolute;
-    /* display: grid; */
-    /* grid-area: 1/1;  */
     
+     position: absolute;
+   
 
     min-height: 443px;
     background-color: var(--accent-color);
@@ -287,7 +285,7 @@ button{
     }
     .image-box{
         padding-top: 2rem;
-        padding-bottom: 1rem;
+        padding-bottom: 1rem; 
     }
     .browse-container .h2{
         font-size: 1.50rem;
@@ -354,9 +352,58 @@ button{
         font-size:1.48rem ;
         line-height: 2rem;
      }
+     .image-text{
+        /* left: 4rem; */
+          right: 1rem;
+     }
      .image-1 img{
         width: 200px;
-     }
+    }
+    .image-box{
+        width: 300px;
+        /* align-items: center; */
+    }
+     
+    
+}
+@media (max-width:340px) {
+    .image-box{
+        width:300px ;
+    }
+    .image-text{
+        width: 100px;
+        height: 100px;
+        text-align: center;
+        padding-left: 1rem;
+        padding-top: 1rem;
+    }
+    .box3 p{
+        font-size: .20rem;
+        line-height: .20rem;
+        padding: .20rem;
+    
+    }
+    .box3 h1{
+        font-size: .50rem;
+        line-height: .50rem;
+        
+        
+    }
+    .box3{
+        padding: 0;
+    
+    }
+    button{
+        width: 40px;
+        height: 20px;
+        font-size: .30rem;
+
+    }
+    .image-box{
+        width: 200px;
+    }
+
+
     
 }
 
@@ -378,6 +425,9 @@ button{
     color: var(--primary-color);
     font-size: 2rem;
 }
+/* .image-box{
+    width: 200px;
+} */
 
 
 /* our product */
@@ -597,6 +647,7 @@ button{
     min-height: 640px;
     overflow: hidden;
     position: relative;
+    
 
 
 
@@ -628,6 +679,8 @@ button{
     font-weight: 600;
 }
 
+
+
 .swiper{
     width: 100%;
     width: 1140px;
@@ -642,21 +695,31 @@ button{
 .navigation{
     top: 12rem;
     right: 4rem;
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     background-color: var(--accent-color-light);
-    padding: 2rem;
+    padding: 1rem;
     z-index: 1;
     
     
+}
+.swiper-button-next{
+    width: 1rem ;
+    height: 1rem;
+
+}
+
+.image-1{
+    /* width: 300px; */
 }
 .swiper-pagination{
    margin-left: 18rem;
    margin-bottom: 5rem;
 }
 .image{
-    margin-left: 1rem;
+    margin-left: auto;
+    margin-right: auto;
     
 }
 .image-1 p{
@@ -672,7 +735,7 @@ button{
     line-height: 3rem;
     left: 4rem;
     opacity: .8;
-   
+
 
     
 }
@@ -692,13 +755,118 @@ button{
     background-color: var(--primary-y);
 
 
+
 } 
 
 
 
 
 
+
+
 /* FuniroFurniture section */
+.check-bed-room{
+    text-align: center;
+    padding-block: rem;
+}
+
+.check-bed-room h2{
+    color: var(--primary-color);
+    font-weight: 700;
+}
+.room-container{
+    display: grid;
+    grid-template-columns: 100px 200px 200px 200px 200px 140px 130px 130px;
+    grid-template-rows: 100px 100px 100px 100px 100px 160px 30px 100px 100px ;
+    gap: 1rem;
+    column-gap: 1rem;
+    row-gap: 1rem;
+    width: 100%;
+    max-width: 1799px;
+    /* min-height: auto; */
+    margin-inline: auto;
+    place-items: center;
+    /* background-color: black; */
+    
+    overflow: hidden;
+    /* aspect-ratio: 1/1; */
+    
+    
+
+}
+
+.image-item{
+    /* border: 1px solid red; */
+}
+
+.image-item:nth-child(1){
+     grid-row: 1/span 3;
+     grid-column: 1/span 1;
+     
+
+
+}
+.image-item:nth-child(2){
+     grid-row: 2/span 2;
+     grid-column: 2/span 2;
+    
+
+}
+
+.image-item:nth-child(3){
+    grid-row: 2/span 3;
+    grid-column: 4/span 1;
+
+
+
+}
+.image-item:nth-child(4){
+    grid-row: 2/span 3;
+    grid-column: 5/span 2;
+
+    
+
+
+}
+.image-item:nth-child(5){
+     grid-row: 1/span 4;
+     grid-column: 7/span 2;
+    
+
+}
+
+.image-item:nth-child(6){
+     grid-row: 4/span 3;
+     grid-column: 1/span 2;
+     
+
+
+}
+.image-item:nth-child(7){
+     grid-row: 4/span 2;
+     grid-column: 3/span 1;
+    
+
+
+}
+.image-item:nth-child(8){
+     grid-row: 5/span 3;
+     grid-column: 5/span 1;
+     
+
+
+}
+.image-item:nth-child(9){
+     grid-row: 5/span 2;
+     grid-column: 6/span 2;
+     
+
+
+}
+.image-item img{
+    width: 100%;
+    /* height: auto; */
+}
 
 
 
@@ -720,12 +888,23 @@ button{
 @media (max-width:720px) {
     .main-product-box{
         display: grid;
-        grid-template-columns: repeat(1 ,1fr);
+        grid-template-columns: repeat(2 ,1fr);
         place-items: center;
         gap: 2rem;
     }
 
 
+    
+}
+@media (max-width:630px) {
+    .main-product-box{
+        display: grid;
+        grid-template-columns: repeat(1 ,1fr);
+        place-items: center;
+        gap: 2rem;
+    }
+
+    
     
 }
  
@@ -781,11 +960,16 @@ footer ul a{
     color: var(--black-color);
 }
 footer{
-    padding-block: 6rem;
+    padding-block: rem;
 }
 .University{
-width: 284px; height: 4.60rem;
+width: 284px;
+ height: 4.60rem;
 }
+.University a{
+    text-decoration: none;
+}
+
 .f-container{
     width: 100%;
     max-width: 1440px;
