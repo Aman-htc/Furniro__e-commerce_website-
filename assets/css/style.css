@@ -647,11 +647,12 @@ button{
     min-height: 640px;
     overflow: hidden;
     position: relative;
-    
+    padding-left: 3rem;
 
 
 
 }
+
 .bed-details h2{
     font-size: 2.48rem;
     font-weight: 700;
@@ -671,6 +672,7 @@ button{
 }
 .bed-details a{
    padding-inline:3rem;
+   /* padding-left: 3rem; */
    padding-block: 1.40rem;
     background-color: var(--primary-y);
     text-decoration: none;
@@ -710,9 +712,7 @@ button{
 
 }
 
-.image-1{
-    /* width: 300px; */
-}
+
 .swiper-pagination{
    margin-left: 18rem;
    margin-bottom: 5rem;
@@ -882,7 +882,25 @@ button{
         place-items: center;
         gap: 2rem;
     }
+    .bed-details h2{
+        font-size: 2rem;
+    }
 
+
+    
+}
+
+@media (max-width:768px) {
+    .bed-details h2{
+        font-size: 1.50rem;
+    }
+   .bed-details a{
+    padding-inline: 1.60rem;
+
+    }
+       .bed-details p{
+        font-size:.90rem ;
+       }
     
 }
 @media (max-width:720px) {
@@ -892,6 +910,24 @@ button{
         place-items: center;
         gap: 2rem;
     }
+    .bed-details p{
+        font-size:.60rem ;
+       }
+     .bed-details h2{
+        font-size: 1.10rem;
+        line-height: 1.80rem;
+    }  
+     .bed-details a{
+    padding-inline: .80rem;
+    padding-block: 1rem;
+    font-size: .60rem;
+
+    } 
+    .swiper-pagination{
+        /* margin-left: 3rem; */
+        margin-left: 4rem;
+    }
+    
 
 
     
@@ -907,6 +943,22 @@ button{
     
     
 }
+/* @media (max-width:540px) {
+    .inner{
+        left: .60rem;
+    }
+    .inner p{
+        font-size: .60rem;
+    }
+    .inner h4{
+        font-size: .80rem;
+    
+    }
+}
+   */
+
+    
+
  
 
 
@@ -960,7 +1012,8 @@ footer ul a{
     color: var(--black-color);
 }
 footer{
-    padding-block: rem;
+
+    margin-top: -3rem;
 }
 .University{
 width: 284px;
