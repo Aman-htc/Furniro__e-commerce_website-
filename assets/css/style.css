@@ -552,16 +552,13 @@ button{
 
     
     position: absolute;
-    /* display: grid;
-    place-items: center; */
+    
     width: 285px;
     height:446px ;
     
     background-color:var(--primary-color-light);
     opacity: .7;
-    /* position: relative; */
-
-
+    
     
 }
  
@@ -694,7 +691,7 @@ button{
     display: flex;
     gap: 3rem;
 }
-.navigation{
+/* .navigation{
     top: 12rem;
     right: 4rem;
     width: 20px;
@@ -704,13 +701,13 @@ button{
     padding: 1rem;
     z-index: 1;
     
-    
-}
-.swiper-button-next{
+     */
+/* } */
+/* .swiper-button-next{
     width: 1rem ;
     height: 1rem;
 
-}
+} */
 
 
 .swiper-pagination{
@@ -783,21 +780,19 @@ button{
     row-gap: 1rem;
     width: 100%;
     max-width: 1799px;
-    /* min-height: auto; */
+    /* grid-area: 1/1; */
+    
     margin-inline: auto;
     place-items: center;
-    /* background-color: black; */
+    
     
     overflow: hidden;
-    /* aspect-ratio: 1/1; */
     
     
 
 }
 
-.image-item{
-    /* border: 1px solid red; */
-}
+
 
 .image-item:nth-child(1){
      grid-row: 1/span 3;
@@ -885,6 +880,8 @@ button{
     .bed-details h2{
         font-size: 2rem;
     }
+    
+
 
 
     
@@ -943,26 +940,6 @@ button{
     
     
 }
-/* @media (max-width:540px) {
-    .inner{
-        left: .60rem;
-    }
-    .inner p{
-        font-size: .60rem;
-    }
-    .inner h4{
-        font-size: .80rem;
-    
-    }
-}
-   */
-
-    
-
- 
-
-
-
 
  
 
