@@ -24,13 +24,48 @@ body{
     --primary-y:#B88E2F;
     --font-52:3.23rem;
     --primary-sell-color:#898989;
+    --container-width:100%
 }
+@media (min-width:576px) {
+    :root{
+        --container-width:540px;
+
+    }
+    
+}
+@media (min-width:768px) {
+    :root{
+        --container-width:740px;
+
+    }
+    
+}
+@media (min-width:992px) {
+    :root{
+        --container-width:940px;
+
+    }
+    
+}
+/* @media (min-width:1200px) {
+    :root{
+        --container-width:1140px;
+
+    }
+    
+} */
 
 
 
 .font-52{
     font-size: var(--font-52);
 }
+
+
+
+/* .t-around{
+column-gap: 1rem;
+} */
 .font-20{
     font-size: var(--font-20);
     color: var(--primary-light);
@@ -70,6 +105,9 @@ body{
     justify-content: center;
 
 }
+.a-align{
+    align-items: end;
+}
 .a-item{
     align-items: center;
 }
@@ -84,9 +122,12 @@ body{
     margin-inline: auto;
    
 }
+.padding-left{
+    padding-left: 1rem;
+}
 .list-unstyled{
     list-style-type: none;
-    padding-left: 0;
+    margin-left: 0;
 }
 
 
@@ -112,10 +153,10 @@ body{
 }
 
 .container{
-    width: 100%;
-    max-width: 1440px;
+
+    max-width: var(--container-width);
     height: 100px;
-    margin: 0 auto;
+    margin-inline:  auto;
 
     
 
@@ -225,12 +266,16 @@ body{
     height: auto;
     display: block;
     margin-inline: auto;
+    /* margin-left: 2rem; */
+    
     
 }
 .image-text{
     padding-top: 2rem;
-    right: 4rem;
-    top:9.50rem;
+    bottom: 0;
+    right: 0rem;
+    /* bottom: 3rem; */
+    bottom: 0;
     width: 643px;
     
      position: absolute;
@@ -241,22 +286,15 @@ body{
     border-radius: .78rem; 
     padding-bottom: 4rem; 
     padding-left: 3rem;
-    
-    
-    
+    margin-right: 2rem;
+    margin-bottom: 3rem;
 }
 
-/* .box3{
-    max-width: 546px;
-    width: 100%;
-    min-height: 344px;
-    padding-right: 4rem;
-    padding-left: 2rem;
-} */
+
 .box3 p{
     color: var(--primary-color);
     font-size: 1.12rem; 
-    padding-bottom: 2rem; 
+    padding-bottom: 1rem; 
     font-weight: bold;
  }
 .top-image h1{
@@ -363,36 +401,65 @@ button{
         width: 300px;
         /* align-items: center; */
     }
+    .room-inspiration .content .text-item{
+        /* font-size: .80rem; */
+        padding: .50em;
+        
+    }
      
     
 }
-@media (max-width:340px) {
-    .image-box{
-        width:300px ;
-    }
+
+@media (max-width:440px) {
     .image-text{
-        width: 100px;
-        height: 100px;
+        width: 160px;
+        height: 150px;
         text-align: center;
         padding-left: 1rem;
         padding-top: 1rem;
     }
     .box3 p{
+        font-size: .50rem;
+        line-height: .50rem;
+        padding: .20rem;
+    
+    }
+    .box3 h1{
+        font-size: .80rem;
+        line-height: .80rem;
+    }
+    button{
+        width: 60px;
+        height: 30px;
+        font-size: .50rem;
+
+    }
+}
+@media (max-width:340px){
+    .image-box{
+        width:300px ;
+    }
+    .image-text {
+    
+        width: 100px;
+        height: 100px ;
+        text-align: center ;
+        padding-left: 1rem ;
+        padding-top: 1rem ;
+    }
+    .image-text.box3 p{
         font-size: .20rem;
         line-height: .20rem;
         padding: .20rem;
     
     }
-    .box3 h1{
+    .top-image .image-text.box3 h1{
         font-size: .50rem;
         line-height: .50rem;
         
         
     }
-    .box3{
-        padding: 0;
     
-    }
     button{
         width: 40px;
         height: 20px;
@@ -595,13 +662,14 @@ button{
     left: 2rem;
     
     padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
+    
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    justify-content: space-between;
+    text-align: center;
+   
     padding: 0;
-    margin: 0;
+    margin: 0; 
     position: absolute;
     display: none;
 }
@@ -632,44 +700,89 @@ button{
 
 
 /*checked bed-room details */
-.bed-room{
-    padding-block: 4rem;
-}
-
-.bed-container{
+.room-inspiration .container .wrapper{
     width: 100%;
     max-width: 1440px;
     margin-inline: auto;
     background-color: #FCF8F3;
-    min-height: 640px;
+    height: auto;
     overflow: hidden;
     position: relative;
     padding-left: 3rem;
+    padding-block: 3rem;
+    
+
+
+}
+
+
+
+
+
+
+.right-palen{
+    width: 70%;
+}
+
+.room-inspiration .swiper-slide .content{
+    display:none;
+   
+}
+.room-inspiration .swiper-slide-active .content {
+    display: flex;
+}
+
+.room-inspiration .swiper-slide:not(.swiper-slide-active) img{
+    display: block;
+    aspect-ratio: 4/5;
+}
+.room-inspiration {
+    margin-block: 3rem;
 
 
 
 }
 
-.bed-details h2{
+.room-inspiration .swiper-slide .content{
+
+    position: absolute;
+    z-index: 3;
+    bottom:1.5em ;
+    left: 1.5em;
+
+    
+}
+
+.text-item{
+    padding: 1.5rem;
+    background-color: #fffc;
+}
+.room-inspiration .content a{
+    display: block;
+    padding: .30em;
+    background-color: var(--primary-y); ;
+}
+.room-inspiration .swiper-slide img{
+    position: relative;
+}
+.room-inspiration .left-palen h2{
     font-size: 2.48rem;
     font-weight: 700;
-    color: var(--primary-color-light);
-
+    color: var(--primary-color-light)
 }
-.bed-details{
+.room-inspiration .right-palen{
     padding-left: 2rem;
 }
-.bed-details p{
-    font-size: var(--font-16);
+.room-inspiration .left-palen p{
+     font-size: var(--font-16);
     font-weight: 500;
     padding-bottom: 4rem;
     color:#616161 ;
 
-
 }
-.bed-details a{
-   padding-inline:3rem;
-   /* padding-left: 3rem; */
+.room-inspiration .left-palen .btn{
+    padding-inline:3rem;
+
    padding-block: 1.40rem;
     background-color: var(--primary-y);
     text-decoration: none;
@@ -677,83 +790,49 @@ button{
     font-size: var(--font-16);
     font-weight: 600;
 }
-
-
-
-.swiper{
-    width: 100%;
-    width: 1140px;
-    min-height: 582px;
-    
-    overflow: hidden;
-}
-.swiper-slide{
-    display: flex;
-    gap: 3rem;
-}
-/* .navigation{
-    top: 12rem;
-    right: 4rem;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: var(--accent-color-light);
-    padding: 1rem;
-    z-index: 1;
-    
-     */
-/* } */
-/* .swiper-button-next{
-    width: 1rem ;
-    height: 1rem;
-
-} */
-
-
 .swiper-pagination{
-   margin-left: 18rem;
-   margin-bottom: 5rem;
+    margin-left: 3rem;
 }
-.image{
-    margin-left: auto;
-    margin-right: auto;
+.swiper-slide .img-fluid{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+@media (max-width:991.99px) {
+    .wrapper{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        
+    }
+    .right-palen{
+        margin-block: 3rem;
+    }
+    
+    
+
+
     
 }
-.image-1 p{
-    top: 0;
-    z-index: 1;
-}
-.inner {
-    width: 200px;
-    height: 100px;
-    background-color: white;
-    text-align: center;
-    bottom: 4rem;
-    line-height: 3rem;
-    left: 4rem;
-    opacity: .8;
+@media (max-width:768px) {
+   
+    .room-inspiration .left-palen h2{
+        font-size: 1.50rem;
+    }
+    .swiper-pagination{
+        margin-left: 6rem;
 
-
+    }
     
 }
-.inner h4{
-    font-size: 1.50rem;
-    color: var(--primary-color-light);
-
-}
-.inner p{
-    font-size: var(--font-16);
-    color: #616161;
-}
-.right{
-    bottom: 4rem;
-    z-index: 1;
-    left: 16.50rem;
-    background-color: var(--primary-y);
 
 
 
-} 
+
+
 
 
 
@@ -764,58 +843,59 @@ button{
 /* FuniroFurniture section */
 .check-bed-room{
     text-align: center;
-    padding-block: rem;
+    padding-bottom: 6rem;
+   
+
 }
 
 .check-bed-room h2{
     color: var(--primary-color);
     font-weight: 700;
+
 }
-.room-container{
+
+
+.room-container .image-box{
     display: grid;
-    grid-template-columns: 100px 200px 200px 200px 200px 140px 130px 130px;
-    grid-template-rows: 100px 100px 100px 100px 100px 160px 30px 100px 100px ;
-    gap: 1rem;
-    column-gap: 1rem;
-    row-gap: 1rem;
-    width: 100%;
-    max-width: 1799px;
-    /* grid-area: 1/1; */
+    grid-template-columns: 5% auto  20%  20% auto  5% auto 5% ;
+    grid-template-rows: 80px auto auto auto 90px auto;
+    
     
     margin-inline: auto;
-    place-items: center;
-    
-    
     overflow: hidden;
-    
+    gap: 1rem;
+    max-width: 1799px; 
+    width: 100%;
+    margin-inline: auto;
     
 
 }
 
 
 
-.image-item:nth-child(1){
-     grid-row: 1/span 3;
-     grid-column: 1/span 1;
+.room-container .image-box img:nth-child(1){
+    
+    grid-column: 1/span 1;
+    grid-row: 1/span 3;
      
 
 
 }
-.image-item:nth-child(2){
-     grid-row: 2/span 2;
-     grid-column: 2/span 2;
+.room-container .image-box img:nth-child(2){
+    grid-row: 2/span 2;
+    grid-column: 2/span 2;
     
 
 }
 
-.image-item:nth-child(3){
-    grid-row: 2/span 3;
+.room-container .image-box img:nth-child(3){
+    grid-row: 3/span 3;
     grid-column: 4/span 1;
 
 
 
 }
-.image-item:nth-child(4){
+.room-container .image-box img:nth-child(4){
     grid-row: 2/span 3;
     grid-column: 5/span 2;
 
@@ -823,44 +903,52 @@ button{
 
 
 }
-.image-item:nth-child(5){
-     grid-row: 1/span 4;
-     grid-column: 7/span 2;
+.room-container .image-box img:nth-child(5){
+    grid-row: 1/span 4;
+    grid-column: 7/span 2;
     
 
 }
 
-.image-item:nth-child(6){
-     grid-row: 4/span 3;
-     grid-column: 1/span 2;
+.room-container .image-box img:nth-child(6){
+    grid-row: 4/span 4;
+    grid-column: 1/span 2;
      
 
 
 }
-.image-item:nth-child(7){
-     grid-row: 4/span 2;
-     grid-column: 3/span 1;
+.room-container .image-box img:nth-child(7){
+    grid-row: 4/span 3;
+    grid-column: 3/span 1;
     
 
 
 }
-.image-item:nth-child(8){
-     grid-row: 5/span 3;
-     grid-column: 5/span 1;
+.room-container .image-box img:nth-child(8){
+    grid-row: 5/span 2;
+    grid-column: 5/span 1;
      
 
 
 }
-.image-item:nth-child(9){
-     grid-row: 5/span 2;
-     grid-column: 6/span 2;
+.room-container .image-box img:nth-child(9){
+    grid-row: 5/span 2;
+    grid-column: 6/span 2;
      
 
 
-}
-.image-item img{
+} 
+
+
+
+.image-box img{
     width: 100%;
-    /* height: auto; */
+    height:100%;
+    object-fit: cover;
+} 
+.text h2{
+    font-size: 2.48rem;
+
 }
 
 
@@ -868,16 +956,19 @@ button{
 
 
 
+ @media (max-width:1200px) {
 
+    
+ }
 
-@media (max-width:991.99px) {
+ @media (max-width:991.99px) {
     .main-product-box{
         display: grid;
         grid-template-columns: repeat(2 ,1fr);
         place-items: center;
         gap: 2rem;
     }
-    .bed-details h2{
+    .room-inspiration  h2{
         font-size: 2rem;
     }
     
@@ -897,9 +988,30 @@ button{
     }
        .bed-details p{
         font-size:.90rem ;
-       }
+    }
+    .room-container .image-box{
+        display: block;
+        columns: 3;
+    
+    }
+    .text h2{
+        font-size: 1.50rem;
+    }
+    .text p{
+        font-size: .80rem; 
+        
+    }
+    
+    
+
     
 }
+
+
+    
+    
+    
+
 @media (max-width:720px) {
     .main-product-box{
         display: grid;
@@ -914,14 +1026,14 @@ button{
         font-size: 1.10rem;
         line-height: 1.80rem;
     }  
-     .bed-details a{
+    .bed-details a{
     padding-inline: .80rem;
     padding-block: 1rem;
     font-size: .60rem;
 
     } 
     .swiper-pagination{
-        /* margin-left: 3rem; */
+        margin-left: 3rem;
         margin-left: 4rem;
     }
     
@@ -939,10 +1051,10 @@ button{
 
     
     
-}
+} 
 
  
-
+ 
 
 
 
